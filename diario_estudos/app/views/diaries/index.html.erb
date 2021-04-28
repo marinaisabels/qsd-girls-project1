@@ -1,0 +1,10 @@
+<h1>Diário de Estudos</h1>
+
+<%= link_to 'Novo item de estudo', new_study_item_path %>
+
+<% @study_items.each do |study_item| %>
+  <%= render diaries %>
+  <div>
+    <%= link_to 'Ver detalhes', diaries %>
+  </div>
+<% end %>

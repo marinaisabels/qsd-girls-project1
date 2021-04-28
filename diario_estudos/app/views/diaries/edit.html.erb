@@ -1,0 +1,8 @@
+<%= form_for @diaries do |f| %>
+    <%= f.label :title, 'Titulo' %>
+    <%= f.text_field :title %>
+    <%= f.label :category, 'Categoria' %>
+    <%= f.text_field :category %>
+    <%= f.label :description, 'Descrição' %>
+    <%= f.text_field :description %>
+    <%= f.submit 'Editar' %>

@@ -1,0 +1,11 @@
+<%= link_to 'Editar', edit_study_item_path(@diaries) %>
+<%= link_to 'Apagar', @diaries, method: :delete, data: { confirm: 'Tem certeza que deseja remover este item?' } %>
+<% if @diaries.finalized? %>
+  <p>Finalizada em: <%= @diaries.finalized_at.strftime('%d/%m/%y %H:%M') %></p>
+<% else %>
+  <%= link_to '✔ Marcar como feito', mark_as_done_study_item_path(@diaries), method: :post %>
+<% end %>
+
+<%= render @diaries %>
+
+<%= link_to 'Voltar', root_path %>
